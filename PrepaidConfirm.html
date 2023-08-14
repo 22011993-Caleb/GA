@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prepaid confirm</title>
+</head>
+<style>
+    .header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(196, 236, 95);
+    }
+
+    .section{
+        text-align: center;
+        background-color: gray;
+        color: white ;
+    }
+
+    .section fromto{
+        color: rgb(196, 236, 95);
+    }
+
+    .section amount{
+        background-color: white;
+        color: black;
+    }
+
+
+
+
+</style>
+<body>
+    <div class = "header">
+        <h1>Prepaid Comfirmation</h1>
+    </div>
+
+    <div class = "section">
+
+        <askfromto>
+            <p>From: 1223 5544 6677 8899</p>
+            <p>To: 1234 5678 9876 5432</p>
+        </fromtok>
+
+        <amount>
+            <P>Amount:$1000 SGD</P>
+            <p>Fee: $1000 - $10 = $990</p>
+            <p>Exchanged: $990 X 3.39 = <span id = "exchange"></span></p>
+            <p>Sent: 3356.1 RM</p>
+
+        </amount>
+
+
+
+    <button><a href="prepaid.html" onclick="confirm()">Confirm</a></button>
+    <button><a href="prepaid.html" onclick="cancel()">Cancel</a></button>
+
+    </div>
+
+    <script>
+        var x = 990;
+        var y = 3.39;
+        var z = x * y;
+
+        document.getElementById("exchange").innerHTML = z;
+
+        function confirm(){
+            var message = "A total of" + z + "RM has been sent! It will be credited within 1 working day!";
+            alert (message);
+        }
+
+        function cancel(){
+            var message = "Transaction has been cancelled!"
+            alert (message);
+        }
+    </script>
+</body>
+</html>

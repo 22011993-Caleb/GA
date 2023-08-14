@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transfer confirm</title>
+</head>
+<style>
+    .header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(196, 236, 95);
+    }
+
+    .section{
+        text-align: center;
+        background-color: gray;
+        color: white ;
+    }
+
+    .section ask{
+        color: rgb(196, 236, 95);
+    }
+
+    .section amount{
+        background-color: white;
+        color: black;
+    }
+
+
+
+
+</style>
+<body>
+    <div class = "header">
+        <h1>Transfer Comfirmation</h1>
+    </div>
+
+    <div class = "section">
+
+        <ask>
+            <p>From: Wallet 1</p>
+            <p>Name: Caleb Ng Kai Jie</p>
+            <p>To: 9085323</p>
+        </ask>
+
+        <amount>
+            <P>Amount:$150 SGD</P>
+            <p>Fee: $150 - $5 = $145</p>
+            <p>Exchanged: $145 X 3.39 = <span id = "exchange"></span></p>
+            <p>Sent: 491.55 RM</p>
+
+        </amount>
+
+
+
+    <button><a href="wallet.html" onclick="confirm()">Confirm</a></button>
+    <button><a href="wallet.html" onclick="cancel()">Cancel</a></button>
+
+
+    </div>
+
+    <script>
+        var x = 145;
+        var y = 3.39;
+        var z = x*y;
+
+        document.getElementById("exchange").innerHTML = z;
+
+        function confirm(){
+            var message = "A total of" + z + "RM has been sent!";
+            alert (message);
+        }
+
+        function cancel(){
+            var message = "Transaction has been cancelled!"
+            alert (message);
+        }
+    </script>
+</body>
+</html>

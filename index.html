@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <style>
+    
+    *{
+    box-sizing: border-box;
+    }
+
+    .header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(196, 236, 95);
+    }
+    .nav {
+        /*Allow the background colour to be shown*/
+        overflow: hidden;
+        background-color: black;
+    }
+    .nav a{
+        float :left ;
+        display: block;
+        color: rgb(196, 236, 95);
+        text-align: center;
+        padding: 20px 20px;
+        text-decoration: none;
+    }
+    /*When the mouse is hovering on the a part of the nav, the colour will change*/
+    .nav a:hover{
+        background-color: white;
+        color: black;
+    }
+
+    /*Change the colour of the selected page*/
+    .nav a.active {
+        background-color: gray;
+        color: white;
+    }
+
+    /*move the sign up and login to the right*/
+    .nav a.right {
+    float: right;
+    }
+
+    .About section1 {
+    float:left;
+    width: 50%;
+    height: 200px;
+    background-color: darkgray;
+    padding: 20px;
+    color: white;
+}
+
+    .About section2 {
+    float: left;
+    padding: 20px;
+    width: 50%;
+    background-color: white;
+    height: 200px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1{
+    text-align: center;
+}
+
+.footer{
+        background-color: black;
+        height: 100px;
+        padding: 20px;
+       text-align: center;
+
+    }
+
+    .footer h1{
+        font-size: 20px;
+        color: rgb(196, 236, 95) ;
+    }
+
+    </style>
+    <body>
+    <div class = "header">
+        <h1>X-Money</h1>
+    </div>
+    
+    <div class = "nav">
+        <a href="Home.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="login.html" class ="right">Login/Sign Up</a>
+    </div>
+    
+    <div class = "About">
+        
+        <section1>
+            <div class="col-sm-6">
+        <p>     
+            Our Story
+        </p>
+            </div>
+        </section1>
+        
+
+        
+        <section2>
+            <div class="col-sm-6">
+            <p>Get to Know Us.</p>
+            <p> We are a company which provides cross boarder transfer services, that has the best and cheapest 
+            option for transferring money, with low transaction fees and fast transaction speed. 
+            </p>
+            </div>
+        </section2>
+        
+
+    </div>
+
+            
+            <div class = "row">
+                <div class = "column">
+                    <h1> Wallet transaction</h1>
+                <img src = "image/digital-wallet-1.webp" style width="50%">
+            </div>
+                <div class = "column">
+                    <h1>Prepaid credit Card</h1>
+                    <img src="image/bank-prepaid-cards-features-small-business.webp" style width = "50%">
+                </div>
+                
+        </div>
+
+        <div class = "footer">
+            <h1>For any inquires please email us at xmoney@gmail.com
+                <br>
+            Call us at +65 97232987</h1>
+        </div>
+      
+    </body>
+</html>

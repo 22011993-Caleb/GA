@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TopUp</title>
+</head>
+<style>
+    .header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(196, 236, 95);
+    }
+
+    .section{
+        text-align: center;
+        background-color: gray;
+        color: white ;
+    }
+
+    .top{
+        background-color: black;
+        height: 100px;
+    }
+
+    .top ask{
+        color: white;
+    }
+
+
+
+
+</style>
+<body>
+    <div class = "header">
+        <h1>Top Up</h1>
+    </div>
+
+    <div class = "section">
+
+        <label for="card">Card Number: </label>
+    <input type="text" id="" name="card" placeholder="**** **** **** ****">
+    <br></br>
+
+    <label for="Date">Date: </label>
+    <input type="text" id="" name="Date" placeholder="DD/MM/YYYY">
+
+    <br></br>
+
+    <label for="CVC">CVC: </label>
+    <input type="text" id="CVC" name="CVC">
+
+    <br></br>
+
+    <div class = "top">
+
+    <ask>
+    <label for="Top up amount">Top up amount: </label>
+    <input type="text" id="Topup" name="Topup">
+    </ask>
+
+    <button><a onclick ="confirm()" href="wallet.html">Confirm</a></button>
+
+    <script>
+        function confirm(){
+        var topped = 150;
+        var message = "A total of $150 is added to the wallet!"
+        alert (message);
+        }
+    </script>
+
+    </div>
+
+    </div>
+</body>
+</html>

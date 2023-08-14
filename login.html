@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(196, 236, 95);
+    }
+
+    .section{
+        text-align: center;
+        background-color: gray;
+        color: white ;
+    }
+
+    .sign {
+        background-color: black;
+    }
+
+    .sign a{
+        text-decoration: none;
+    }
+
+</style>
+<body>
+    <div class = "header">
+        <h1>Login</h1>
+    </div>
+
+    <div class = "section">
+
+        <label for="EmailAddress">Email Address: </label>
+    <input type="text" id="" name="EmailAddress" placeholder="ABC@email.com">
+    <br></br>
+
+    <label for="Password">Password: </label>
+    <input type="text" id="Password" name="Password">
+
+    <br></br>
+    <label for = "OTP">OTP:</label>
+    <input type = "text" id = "OTP" name = "OTP">
+
+    <button>Request OTP</button>
+
+    <br></br>
+    <button><a href="menu.html">Login</a></button>
+    <button><a href="#" onclick="repeat()">Login(fail)</a></button>
+    <button><a href="#"onclick="sus()">Login</a></button>
+
+   <br></br>
+        <div class = "row">
+            <div class = "col-sm-12">
+   <a href="menu.html"><img src="image\Singpass_White_Inline.png" width="250px"></a>
+            </div>
+        </div>
+   <br></br>
+        <div class = "sign">
+            <button><a href ="signup.html">Sign Up</a></button>
+            <br>
+            <button onclick ="">Forget Password</button>
+        </div>
+    </div>
+
+    <script>
+        function repeat(){
+            var message = "This account has been lock due to multiple failed login attemps! "
+            alert(message);
+        }
+
+        function sus(){
+            var message = "This account has been temporary suspended due to detection of suspious activity."
+            alert(message);
+        }
+    </script>
+  
+</body>
+</html>
