@@ -36,7 +36,7 @@
     <div class = "section">
 
         <label for="EmailAddress">Email Address: </label>
-    <input type="text" id="" name="EmailAddress" placeholder="ABC@email.com">
+    <input type="text" id="EmailAddress" name="EmailAddress" placeholder="ABC@email.com">
     <br></br>
 
     <label for="Password">Password: </label>
@@ -49,9 +49,7 @@
     <button>Request OTP</button>
 
     <br></br>
-    <button><a href="menu.html">Login</a></button>
-    <button><a href="#" onclick="repeat()">Login(fail)</a></button>
-    <button><a href="#"onclick="sus()">Login</a></button>
+    <button onclick="test()">Login</button>
 
    <br></br>
         <div class = "row">
@@ -68,16 +66,40 @@
     </div>
 
     <script>
-        function repeat(){
-            var message = "This account has been lock due to multiple failed login attemps! "
-            alert(message);
-        }
 
-        function sus(){
-            var message = "This account has been temporary suspended due to detection of suspious activity."
-            alert(message);
+        var tries = 0;
+        function test(){
+            var EmailAddress = document.getElementById("EmailAddress").value;
+            var Password = document.getElementById("Password").value;
+            var OTP = document.getElementById("OTP").value;
+            var url = "menu.html";
+            
+            var max = 3;
+            var pass = "c369";
+            var banemail = "caleb";
+
+            if ( (EmailAddress ==="") || (Password === "") || (OTP === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            else if (Password !== pass) {
+                    if (tries === max){
+                        alert("This account has been lock due to multiple attemps, please contact our customer support for more information.");
+                        document.getElementById("Password").disabled = true;
+                    }
+                    else{
+                        alert("Invalid password!");
+                        tries ++;
+                    }
+            }
+
+            else if (EmailAddress === banemail){
+                alert("This account has been suspended due to suspicious activity, please contact our customer support for more information");
+            }
+            else {window.location.href = url;
+            }
         }
-    </script>
-  
+        </script>
 </body>
 </html>
