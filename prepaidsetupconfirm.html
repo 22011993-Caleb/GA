@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirmation</title>
+</head>
+<style>
+    .header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(196, 236, 95);
+    }
+
+    .section{
+        text-align: center;
+        background-color: gray;
+        color: white ;
+    }
+
+    .section a {
+        text-decoration: none;
+    }
+
+    .section h1{
+        color: rgb(196, 236, 95);
+    }
+
+    .section .box{
+        background-color: rgb(85, 85, 85);
+        color: rgb(196, 236, 95) ;
+        overflow: auto;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+    <div class = "header">
+        <h1>Set Up</h1>
+    </div>
+
+    <div class = "section">
+
+        <h1>Confirmation</h1>
+
+        <div class="box">
+        <p>Full Name: Joshua Chan</p>
+        <p>DOB: 01/06/1996</p>
+        <P>Poster Code: 987123</P>
+        <p>Email: Joshua@mail.com</p>
+        <p>Phone Number: 901668866</p>
+        <br>
+        <p>NRIC: T00000123I</p>
+        <p>Citizenship: Singaporean</p>
+        <p>Residency Status: citizen</p>
+        <br>
+        <p>Annual Income: $3500</p>
+        <p>Employment status: Full-Time EMplopyee</p>
+        <p>Source of Income: Software engineer at ABC company</p>
+        <br>
+        <p>Banking Account Number: 1223 5544 6677 8899</p>
+        <p>Routing Number: 5435624</p>
+        <p>Bank Name: OCBC</p>
+        </box>  
+    
+    <button><a href="prepaid.html" onclick="confirm">Confirm</a></button>
+
+    <br></br>
+
+    <button><a href="prepaid.html" onclick="cancel">Cancel</a></button>
+
+    <script>
+        function confirm(){
+            var message = "This request has been sent for approval, an email will be send once all data has been checked, email will be sent within 4-5 working days!"
+            alert(message)
+        }
+        function cancel(){
+            var message2= "This setup has been cnacelled all data written will be deleted!"
+            alert(message2)
+        }
+    </script>
+
+    </div>
+</body>
+</html>
