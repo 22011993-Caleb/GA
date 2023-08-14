@@ -36,11 +36,11 @@
     <div class = "section">
 
         <label for="EmailAddress">Email Address: </label>
-    <input type="text" id="" name="EmailAddress" placeholder="ABC@email.com">
+    <input type="text" id="EmailAddress" name="EmailAddress" placeholder="ABC@email.com">
     <br></br>
 
     <label for="EmailAddress">Confirm Email Address: </label>
-    <input type="text" id="" name="conEmailAddress" placeholder="ABC@email.com">
+    <input type="text" id="conEmailAddress" name="conEmailAddress" placeholder="ABC@email.com">
     <br></br>
 
     <label for="Password">Password: </label>
@@ -53,32 +53,55 @@
 
 
     <br></br>
+    <button onclick="test()">Sign Up</button>
     <button onclick="displayemail()"><a href ="login.html">Sign Up</a></button>
 
     <br>
 
     <h1>OR</h1>
 
-    <script>
-        function displayemail(){
-            var message = "An email has been sent to your account please verify!"
-            alert(message);
-        }
-
-        function complete(){
-            var message2 = "Account has been created!"
-            alert(message2);
-        }
-    </script>
-
    <br></br>
 
    <div class = "row">
     <div class = "col-sm-12">
-<a href="menu.html"><img src="image\Singpass_White_Inline.png" width="250px"></a>
+<a href="menu.html" onclick="complete()"><img src="image\Singpass_White_Inline.png" width="250px"></a>
     </div>
 </div>
 
+</div>
+<script>
+    function test(){
+        var EmailAddress = document.getElementById("EmailAddress").value;
+        var conEmailAddress = document.getElementById("conEmailAddress").value;
+        var CVC = document.getElementById("Password").value;
+        var conPassword = document.getElementById("conPassword").value;
+        var url = "login.html";
+
+        if ((EmailAddress === "") || (conEmailAddress ==="") || (Password === "") || (conPassword === "")) {
+            var message = "Please fill up all the input";
+            alert(message);
+            return false;
+        }
+
+        else if (EmailAddress !== conEmailAddress){
+            alert("Email entered is different, please try again!");
+        }
+        
+        else if (Password !== conPassword){
+            alert("Password entered is different, please try again!")
+        }
+        else{
+        window.location.href = url;
+        var message = "An email has been sent to your account please verify!"
+            alert(message);
+    }
+    }
+
+    function complete(){
+            var message2 = "Account has been created!"
+            alert(message2);
+        }
+</script>
 
 </body>
 </html>
