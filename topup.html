@@ -39,11 +39,11 @@
     <div class = "section">
 
         <label for="card">Card Number: </label>
-    <input type="text" id="" name="card" placeholder="**** **** **** ****">
+    <input type="text" id="card" name="card" placeholder="**** **** **** ****">
     <br></br>
 
     <label for="Date">Date: </label>
-    <input type="text" id="" name="Date" placeholder="DD/MM/YYYY">
+    <input type="text" id="Date" name="Date" placeholder="DD/MM/YYYY">
 
     <br></br>
 
@@ -58,19 +58,31 @@
     <label for="Top up amount">Top up amount: </label>
     <input type="text" id="Topup" name="Topup">
     </ask>
+    <br>
+    <button onclick="test()" >Next</button>
 
-    <button><a onclick ="confirm()" href="wallet.html">Confirm</a></button>
 
+    </div>
+
+    </div>
     <script>
-        function confirm(){
-        var topped = 150;
-        var message = "A total of $150 is added to the wallet!"
-        alert (message);
+        function test(){
+            var card = document.getElementById("card").value;
+            var Date = document.getElementById("Date").value;
+            var CVC = document.getElementById("CVC").value;
+            var Topup = document.getElementById("Topup").value;
+            var url = "wallet.html";
+            var topped = 150;
+
+            if ((card === "") || (Date ==="") || (CVC === "") || (Topup === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            window.location.href = url;
+            var message = "A total of $150 is added to the wallet!"
+            alert (message);
         }
     </script>
-
-    </div>
-
-    </div>
 </body>
 </html>

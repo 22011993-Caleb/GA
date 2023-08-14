@@ -39,11 +39,11 @@
     <div class = "section">
 
         <label for="card">Card Number (FROM): </label>
-    <input type="text" id="" name="card" placeholder="**** **** **** ****">
+    <input type="text" id="card" name="card" placeholder="**** **** **** ****">
     <br></br>
 
     <label for="Date">Date: </label>
-    <input type="text" id="" name="Date" placeholder="DD/MM/YYYY">
+    <input type="text" id="Date" name="Date" placeholder="DD/MM/YYYY">
 
     <br></br>
 
@@ -63,9 +63,26 @@
 
     <br></br>
 
-    <button><a href="PrepaidConfirm.html">Confirm</a></button>
-
+    <button onclick="test()">Next</button>
+    
 
     </div>
+    <script>
+        function test(){
+            var card = document.getElementById("card").value;
+            var Date = document.getElementById("Date").value;
+            var CVC = document.getElementById("CVC").value;
+            var sent = document.getElementById("sent").value;
+            var SentAccount = document.getElementById("SentAccount").value;
+            var url = "PrepaidConfirm.html";
+
+            if ((card === "") || (Date ==="") || (CVC === "") || (sent === "") || (SentAccount === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>

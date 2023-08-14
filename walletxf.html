@@ -39,11 +39,11 @@
     <div class = "section">
 
         <label for="card">Name: </label>
-    <input type="text" id="" name="name">
+    <input type="text" id="name" name="name">
     <br></br>
 
     <label for="Phone">Phone number: </label>
-    <input type="text" id="" name="Phone">
+    <input type="text" id="phone" name="Phone">
 
 
     <br></br>
@@ -55,11 +55,27 @@
     <input type="text" id="Sent" name="Sent">
     </ask>
 
-    <button><a href="walletconfirm.html">Confirm</a></button>
-
+    <br>
+    <button onclick="test()">Next</button>
+    
 
     </div>
 
     </div>
+    <script>
+        function test(){
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var Sent = document.getElementById("Sent").value;
+            var url = "walletconfirm.html";
+
+            if ((name === "") || (phone ==="") || (Sent === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>

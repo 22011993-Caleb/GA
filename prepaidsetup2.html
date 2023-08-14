@@ -16,6 +16,7 @@
         text-align: center;
         background-color: gray;
         color: white ;
+        padding: 10px;
     }
 
     .section a {
@@ -43,8 +44,8 @@
         </IDTYPE_option>
     <br></br>
 
-    <label for="IN">ID Number: </label>
-    <input type="text" id="IN" name="IN">
+    <label for="ID">ID Number: </label>
+    <input type="text" id="ID" name="ID">
 
     <p>Upload ID document:<button>Upload</button></p>
 
@@ -60,17 +61,27 @@
 
     <br></br>
 
-    <label for="Phone">Phone number: </label>
-    <input type="text" id="" name="Phone">
-    
-    <br></br>
-
-    <button><a href="prepaidsetup2.html">Next</a></button>
+    <button onclick="test()">Next</button>
 
     <br></br>
 
     <button><a href="prepaid.html">Return Home</a></button>
 
     </div>
+    <script>
+        function test(){
+            var id = document.getElementById("ID").value;
+            var Citizenship = document.getElementById("Citizenship").value;
+            var Status = document.getElementById("Status").value;
+            var url = "prepaidsetup3.html";
+
+            if ((ID === "") || (Citizenship ==="") || (Status === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>

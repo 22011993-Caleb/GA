@@ -16,6 +16,7 @@
         text-align: center;
         background-color: gray;
         color: white ;
+        padding: 10px;
     }
 
     .section a {
@@ -50,12 +51,12 @@
 
 
     <label for="SI">Source Of Income: </label>
-        <input type="text" id="AI" name="AI">
+        <input type="text" id="SI" name="SI">
 
 
     <h1>Bank Account Information</h1>
     <label for="bankacc">Bank Account Number </label>
-    <input type="text" id="bankacc" >
+    <input type="text" id="bankacc" name = "bankacc" >
 
     <br></br>
 
@@ -69,12 +70,30 @@
     
     <br></br>
 
-    <button><a href="prepaidsetupconfirm.html">Next</a></button>
+    <button onclick="test()">Next</button>
+
 
     <br></br>
 
     <button><a href="prepaid.html">Return Home</a></button>
 
     </div>
+    <script>
+        function test(){
+            var Name = document.getElementById("Name").value;
+            var SI = document.getElementById("SI").value;
+            var bankacc = document.getElementById("bankacc").value;
+            var Routing = document.getElementById("Routing").value;
+            var AI = document.getElementById("AI").value;
+            var url = "prepaidsetupconfirm.html";
+
+            if ((Name === "") || (SI ==="") || (bankacc === "") || (Routing === "") || (AI === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>

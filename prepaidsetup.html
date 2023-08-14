@@ -32,9 +32,10 @@
     </div>
 
     <div class = "section">
-
+    
+    
         <label for="name">Full Name: </label>
-    <input type="text" id="" name="name" >
+    <input type="text" id="name" name="name" >
     <br></br>
 
     <label for="DOB">Date of birth: </label>
@@ -53,16 +54,34 @@
     <br></br>
 
     <label for="Phone">Phone number: </label>
-    <input type="text" id="" name="Phone">
+    <input type="text" id="phone" name="Phone">
     
     <br></br>
 
-    <button><a href="prepaidsetup2.html">Next</a></button>
-
+    <button onclick="test()">Next</button>
+    
     <br></br>
 
-    <button><a href="prepaid.html">Return Home</a></button>
+    <button><a href="prepaid.html" >Return Home</a></button>
 
     </div>
+
+    <script>
+        function test(){
+            var name = document.getElementById("name").value;
+            var DOB = document.getElementById("DOB").value;
+            var address = document.getElementById("Address").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var url = "prepaidsetup2.html";
+
+            if ((name === "") || (DOB ==="") || (address === "") || (email === "") || (phone === "")) {
+                var message = "Please fill up all the input";
+                alert(message);
+                return false;
+            }
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
